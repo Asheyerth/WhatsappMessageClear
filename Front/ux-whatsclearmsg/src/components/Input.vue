@@ -2,17 +2,19 @@
 <h2>
     Ingresar mensaje
 </h2>
+<Textarea v-model="userInput.message" placeholder="Ingrese su mensaje"></Textarea>
 <form>
-    <input type="text" v-model="userInput.message">
     <input type="text" v-model="userInput.name">
     <input type="text" v-model="userInput.age">
-    {{ userInput }}
+    <button v-on:click=clearMessage>Limpiar</button>
 </form>
-<button v-on:click=clearMessage>Limpiar</button>
+{{ userInput }}
+{{ userInput.message }}
 
 </template>
 
 <script>
+//<input type="text" v-model="userInput.message">
 //import axios from 'axios';
 //import api from './plugins/axios.js';
 export default {
