@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask import request, jsonify
 #Obtener el servicio
-from src.controllers.message_controller import procesarMsg
+from src.services.message_service import procesarMsg
 
 # Definir el Blueprint
 main_bp = Blueprint('main', __name__)
