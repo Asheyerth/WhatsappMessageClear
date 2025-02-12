@@ -2,11 +2,11 @@
 <h2>
     Ingresar mensaje
 </h2>
-<Textarea v-model="userInput.message" placeholder="Ingrese su mensaje"></Textarea>
 <form>
+    <textarea v-model="userInput.message" placeholder="Ingrese su mensaje"/>
     <input type="text" v-model="userInput.name">
     <input type="text" v-model="userInput.age">
-    <button v-on:click=clearMessage>Limpiar</button>
+    <button v-on:click.prevent=clearMessage>Limpiar</button>
 </form>
 {{ userInput }}
 {{ userInput.message }}
